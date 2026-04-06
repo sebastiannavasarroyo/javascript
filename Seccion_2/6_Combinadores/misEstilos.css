@@ -1,0 +1,15 @@
+div p{
+    color: chartreuse;
+}
+
+ol > li{
+    font-weight: bolder;
+}
+
+h2 ~ h3{
+    background-color: blue;
+}
+
+div P[aling="left"]:hover{
+    background-color: darkorange;
+}

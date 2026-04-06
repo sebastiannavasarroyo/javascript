@@ -1,0 +1,21 @@
+h1{ 
+    font-family: 'Courier New' , 'Courier New', Courier, monospace;
+    color: blue;
+}
+
+#perros{
+    color:brown;
+    border: 5px; border-style: dotted;
+}
+
+.estiloCompartido {
+    color: blueviolet;
+    border: 5px; border-style: solid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+p{
+    color: cyan;
+    border: 1px; border-style: solid;
+}
