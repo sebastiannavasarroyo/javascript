@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fecha y hora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarReloj()">
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 id="textoAlarma">00:00:00</h1>
+
+    <audio id="audioAlarma">
+        <source src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido no habilitado
+    </audio>
+
+    <script>
+        let elementosSegundos = document.getElementById("tiempoElegido");
+        let elementosTextoAlarma = document.getElementById("textoAlarma");
+        let elementosSonidoAlarma = document.getElementById("audioAlarma");
+
+        function comenzarTiempo() {
+            setTimeout(tiempoCumplido, 1000* elementosSegundos.value);
+        }
+
+        function tiempoCumplido() {
+           elementosTextoAlarma.style.color = "green";
+           elementosSonidoAlarma.play();
+        }
+
+        function comenzarReloj() {
+            setInterval(ticTac, 1000);
+        }
+
+        function ticTac() {
+            let tiempoActual = new Date();
+            let hora = tiempoActual.getHours();
+            let minutos = tiempoActual.getMinutes();
+            let segundos = String(tiempoActual.getSeconds()). padStart(2,"0");
+
+            let textoHora = hora + ":" + minutos + ":" + segundos;
+            elementosTextoAlarma.textContent = textoHora;
+        }
+        
+    </script>
+</body>
+</html>
