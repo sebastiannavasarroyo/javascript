@@ -1,0 +1,15 @@
+body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 50px;
+            background-color: aqua;
+        }
+        #contador {
+            font-size: 2em;
+            margin: 20px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }

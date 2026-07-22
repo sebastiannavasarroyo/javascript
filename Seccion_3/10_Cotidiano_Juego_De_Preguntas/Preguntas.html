@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Regresivo</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #contador {
-            font-size: 2em;
-            margin: 20px;
-        }
-        button {
-            font-size: 1em;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Cotidiano Juego de Preguntas</title>
+    <Link rel="stylesheet" href="misEstilos.css">
 </head>
-<body>
-    
-    <h1>Contador Regresivo</h1>
-    <div id="Contador">30</div>
-    <button onclick="iniciarContador()">Iniciar</button>
-    <button onclick="DetenerContador()">Detener</button>
-    <button onclick="ReiniciarContador()">Reiniciar</button>
+<body onload="iniciarContador()">
+
+<div id="Contador">30</div>
+
+
+    <p><h1>Contesta las siguentes preguntas con tiempo</h1></p>
+    <p><h2>Se rápido!</h2></p><br>
+    <p><h3>¿Cuanto es 5x5?</h3></p>
+    <input type="text" id="25">
+    <p><h3>¿Cuál es el país más grande del mundo por territorio?</h3></p>
+    <input type="text" id="Rusia">
+    <p><h3>¿Cuál es el órgano más grande del cuerpo humano?</h3></p>
+    <input type="text" id="Piel">
+    <p><h3>¿Cuál es el río más largo del mundo?</h3></p>
+    <input type="text" id="Amazonas">
+    <p><h3>¿Cuál es la capital de Japón?</h3></p>
+    <input type="text" id="Tokio">
+    <br>
+    <br>
+    <button onclick="DetenerContador()">Terminar</button>
+    <button onclick="ReiniciarContador()">Volver a intentar</button>
+
+
 
     <script>
         let tiempo = 30;
@@ -45,7 +44,7 @@
                 actualizarContador()
             } else {
                 DetenerContador();
-                alert("¡Tiempo terminado!")
+                alert("¡Game Over!")
             }
         }
 
@@ -68,5 +67,6 @@
 
         actualizarContador();
     </script>
+
 </body>
 </html>
