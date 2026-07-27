@@ -55,17 +55,47 @@
         }
 
         function DetenerContador() {
-            clearInterval(intervalo);
-            intervalo = null;
-        }
+    clearInterval(intervalo);
+    intervalo = null;
 
-        function ReiniciarContador() {
-            DetenerContador();
-            tiempo = 30;
-            actualizarContador();
-        }
+    let puntos = 0;
 
-        actualizarContador();
+    if (document.getElementById("25").value == "25") {
+        puntos++;
+    }
+
+    if (document.getElementById("Rusia").value.toLowerCase() == "rusia") {
+        puntos++;
+    }
+
+    if (document.getElementById("Piel").value.toLowerCase() == "piel") {
+        puntos++;
+    }
+
+    if (document.getElementById("Amazonas").value.toLowerCase() == "amazonas") {
+        puntos++;
+    }
+
+    if (document.getElementById("Tokio").value.toLowerCase() == "tokio") {
+        puntos++;
+    }
+
+    alert("Obtuviste " + puntos + " de 5 respuestas correctas.");
+}
+
+function ReiniciarContador() {
+    DetenerContador();
+
+    document.getElementById("25").value = "";
+    document.getElementById("Rusia").value = "";
+    document.getElementById("Piel").value = "";
+    document.getElementById("Amazonas").value = "";
+    document.getElementById("Tokio").value = "";
+
+    tiempo = 30;
+    actualizarContador();
+    iniciarContador();
+}
     </script>
 
 </body>
