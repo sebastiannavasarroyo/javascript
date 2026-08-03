@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Random</title>
+</head>
+<body>
+    <button onclick="crearAleatorio(10,15)">Dame un Aleatorio</button>
+    <h2>Numero aleatorio: <span id="textoAleatorio">---</span></h2>
+
+    <script>
+        let elemtoAleatorio = document.getElementById("textoAleatorio");
+
+        function crearAleatorio(minimo,maximo) {
+            maximo = maximo + 1;
+            resultado = Math.floor(Nath.random() * (maximo - minimo) + minimo);
+            elemtoAleatorio.textContent = resultado;
+        }
+    </script>
+</body>
+</html>
