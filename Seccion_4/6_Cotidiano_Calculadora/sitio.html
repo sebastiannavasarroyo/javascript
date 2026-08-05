@@ -1,17 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Calculadora</title>
+    <title>Calculadora Basica</title>
     <Link rel="stylesheet" href="misEstilos.css">
-
 </head>
 <body>
-    <p><h1>Calculadora</h1></p>
-    <input type="number" id="random1">
-    <input type="number" id="random2">
-    <button onclick="sumarCifra()">+</button>
-    <button onclick="restarCifra()">-</button>
 
+    <h1>Calculadora</h1>
+
+    <p><input type="number" id="num1"></p>
+    <p><input type="number" id="num2"></p>
+
+    <div>
+        <button class="boton" onclick="sumar()">+</button>
+        <button class="boton" onclick="restar()">-</button>
+        <button class="boton" onclick="multiplicar()">*</button>
+        <button class="boton" onclick="dividir()">/</button>
+    </div>
+    
+    <div>
+        <button class="boton-ancho" onclick="raiz()">raiz</button>
+        <button class="boton-ancho" onclick="potencia()">potencia</button>
+    </div>
+
+    <div>
+        <button class="boton-ancho" onclick="absoluto()">absoluto</button>
+        <button class="boton-ancho" onclick="aleatorio()">random</button>
+    </div>
+
+    <h3>Resultado:</h3>
+    <input type="text" id="resultado" readonly>
+
+    <div>
+        <button class="boton" onclick="redondear()">round</button>
+        <button class="boton" onclick="piso()">floor</button>
+        <button class="boton" onclick="techo()">cell</button>
+    </div>
+
+    <script>
+        function mostrarResultado(valor) {
+            document.getElementById("resultado").value = valor;
+        }
+
+    
+        function sumar() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let operacion = n1 + n2;
+            mostrarResultado(operacion);
+        }
+
+        function restar() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let operacion = n1 - n2;
+            mostrarResultado(operacion);
+        }
+
+        function multiplicar() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let operacion = n1 * n2;
+            mostrarResultado(operacion);
+        }
+
+        function dividir() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let operacion = n1 / n2;
+            mostrarResultado(operacion);
+        }
+
+        function raiz() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let operacion = Math.sqrt(n1); 
+            mostrarResultado(operacion);
+        }
+
+        function potencia() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let operacion = Math.pow(n1, n2); 
+            mostrarResultado(operacion);
+        }
+
+        function absoluto() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let operacion = Math.abs(n1); 
+            mostrarResultado(operacion);
+        }
+
+        function aleatorio() {
+            let operacion = Math.random(); 
+            mostrarResultado(operacion);
+        }
+
+        function redondear() {
+            let actual = parseFloat(document.getElementById("resultado").value);
+            let operacion = Math.round(actual);
+            mostrarResultado(operacion);
+        }
+
+        function piso() {
+            let actual = parseFloat(document.getElementById("resultado").value);
+            let operacion = Math.floor(actual); 
+            mostrarResultado(operacion);
+        }
+
+        function techo() {
+            let actual = parseFloat(document.getElementById("resultado").value);
+            let operacion = Math.ceil(actual); 
+            mostrarResultado(operacion);
+        }
+    </script>
 
 </body>
 </html>
