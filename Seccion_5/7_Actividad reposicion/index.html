@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recomendador actividad recreativa</title>
+     <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+    <h1>Recomendador actividad recreativa</h1>
+
+    <label>Presupuesto:</label>
+    <input type="number" id="presupuesto">
+
+     <label>Cantidad de personas:</label>
+    <input type="number" id="cantidad">
+
+    <select id="actividad">
+        <option value="deporte">Deportes</option>
+        <option value="entretenimiento">Entretenimiento</option>
+        <option value="turismo">Turismo</option>
+        <option value="familiar">Actividades familiares</option>
+    </select>
+    <button onclick="recomendar()">Recomendar</button>
+    <button onclick="limpiar()">Limpiar</button>
+
+    <p id="resultado"></p>
+
+    <script src="misScripts.js"></script>
+</body>
+</html>
