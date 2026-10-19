@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop For 4</title>
+</head>
+<body>
+    <label>Ingrese su número: </label>
+    <input type="number" id="txtNumero" value="5">
+    <button onclick="ejecutarFuncion()">Ejecutar función</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function testLoop(numero) {
+            let contenido = "";
+            for (let i = 1; i <= 10; i++) {
+                contenido += numero + " x " + i + " = " + (numero * i) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = contenido;
+        }
+
+        function ejecutarFuncion() {
+            let num = document.getElementById("txtNumero").value;
+            testLoop(Number(num));
+        }
+    </script>
+</body>
+</html>

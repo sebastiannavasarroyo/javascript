@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop Do... While 1</title>
+</head>
+<body>
+    <script>
+        function testLoop(vueltasTotales) {
+            let contador = 1;
+
+            if (vueltasTotales > 0) {
+                do {
+                    document.write("Vuelta número: " + contador + "<br>");
+                    contador++;
+                } while (contador <= vueltasTotales);
+            }
+        }
+
+        let usuarioVueltas = prompt("¿Cuántas vueltas quieres dar?");
+        testLoop(Number(usuarioVueltas));
+    </script>
+</body>
+</html>
