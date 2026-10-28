@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loop Do... While - Práctica 2</title>
+    </head>
+    <body>
+        <script>
+            let numero = parseInt(prompt("Ingresa un numero para generar su tabla de multiplicar:"));
+            let i = 1;
+
+            console.log("--- Tabla de multiplicar del " + numero + " ---");
+
+            do {
+                console.log(numero + " x " + i + " = " + (numero * i));
+                i++;
+            } while (i <= 10);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Práctica Break y Continue 2</title>
+</head>
+<body>
+    <script>
+        let miArray = [9, 5, 6, 2, 7];
+        function testLoop(arrayDeNumeros) {
+            for (let numero of arrayDeNumeros) {
+                if (numero <= 5) {
+                    continue;
+                }
+                console.log(numero);
+            }
+        }
+
+        testLoop(miArray);
+    </script>
+</body>
+</html>

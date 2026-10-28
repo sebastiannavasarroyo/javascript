@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prácticas Break & Continue 1</title>
+    </head>
+    <body>
+        <script>
+            let miArray = ['A', 'A', 'B', 'A', 'B', 'B', 'A'];
+
+            function testLoop(array) {
+                for (let letra of array) {
+                    if (letra === 'B') {
+                        break;
+                    }
+                    console.log(letra);
+                }
+            }
+
+            testLoop(miArray);
+        </script>
+    </body>
+</html>
