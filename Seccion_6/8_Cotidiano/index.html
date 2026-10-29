@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletín estudiantil</title>
+  <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+  <main class="boletin">
+    <header>
+      <h1>Bienvenido a tu boletín estudiantil</h1>
+      <h2 id="alumno">Alumno: Sebastián Navas Arroyo</h2>
+    </header>
+
+    <section>
+      <h3>Notas:</h3>
+      <ul id="listaNotas"></ul>
+    </section>
+
+    <section>
+      <h3>Promedio:</h3>
+      <button id="btnPromedio">Calcular promedio</button>
+      <p id="resultadoPromedio" class="resultado"></p>
+    </section>
+
+    <section>
+      <h3>Nota más alta:</h3>
+      <button id="btnMasAlta">Buscar nota más alta</button>
+      <p id="resultadoMasAlta" class="resultado"></p>
+    </section>
+
+    <section>
+      <h3>¿Hubo algún aplazo?</h3>
+      <button id="btnAplazados">Consultar aplazo</button>
+      <p id="resultadoAplazados" class="resultado"></p>
+    </section>
+  </main>
+
+  <script src="misScripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background: #f4f6fa;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+.boletin {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.escudo {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 130px;
+}
+
+header { text-align: center; }
+
+h1 {
+  color: #b01c2e;
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: #3b3b98;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+h3 { margin-bottom: 8px; }
+
+#listaNotas li {
+  color: #1a1aff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: #eee;
+  cursor: pointer;
+}
+
+button:hover { background: #ddd; }
+
+.resultado {
+  font-weight: bold;
+  color: #1b6b32;
+  min-height: 1.2em;
+}
